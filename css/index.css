@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+*::selection {
+    background-color: #fed136;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 277841 */
+    src: url('//at.alicdn.com/t/font_nddvopr7s4z33di.eot');
+    src: url('//at.alicdn.com/t/font_nddvopr7s4z33di.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_nddvopr7s4z33di.woff') format('woff'),
+    url('//at.alicdn.com/t/font_nddvopr7s4z33di.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_nddvopr7s4z33di.svg#iconfont') format('svg');
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear-fix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.center {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.wrap {
+    background-color: #f7f7f7;
+}
+
+.pos-r {
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 + p,
+h3 + p {
+    font-style: italic;
+}
+
+/* nav style start*/
+#nav {
+    background-color: #222;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#nav .center {
+    padding:10px 0;
+}
+
+#nav .fl {
+    width: 152px;
+    height: 50px;
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #FED136;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+#nav li {
+    display: inline-block;
+    padding:15px;
+    color: #fff;
+
+    border-radius: 5px;
+}
+
+#nav li:hover {
+    color: #FED136;
+}
+/* nav style end*/
+
+/* header style start*/
+#header {
+    width: 100%;
+    height: 760px;
+    margin-top: 70px;
+    padding-top: 420px;
+    background-image: url(../img/top.png);
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: darkred;
+}
+
+#header p {
+    vertical-align: middle;
+}
+
+#header h2 {
+    font-family: "Adobe Garamond";
+    font-style: italic;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+}
+
+#header h1 {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 50px;
+}
+
+#header .btn {
+    color: #fff;
+    background-color: #fed136;
+    border: 1px solid #fed136;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+    opacity: 0.8;
+}
+
+#header .btn:hover {
+    opacity: 1;
+}
+/* header style end*/
+
+/* services & protfolio style start*/
+#services {
+    height: 700px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#services .services,
+#protfolio .protfolio {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#services h3,
+#about h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+#services .iconfont {
+    margin-top:75px;
+}
+
+#services .iconfont p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+#services section {
+    display: inline-block;
+    width: 33%;
+    padding: 0 20px;
+    vertical-align: top;
+}
+
+#protfolio,
+#about {
+    height: 100%;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#protfolio .protfolio {
+    margin-bottom: 100px;
+}
+
+#protfolio .fl {
+    width: 370px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#protfolio .fl img {
+    width: 100%;
+    height: 100%;
+}
+
+#protfolio .fl .uncover {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+}
+
+#protfolio .clear-fix {
+    margin-left: -15px;
+}
+
+#protfolio .intro {
+    text-align: center;
+    background-color: #fff;
+    height: 80px;
+    padding: 20px;
+}
+
+#protfolio h3 {
+    font-size: 18px;
+}
+
+#protfolio p {
+    font-size: 14px;
+}
+
+#protfolio .fl .uncover:hover {
+    opacity: 0.7;
+}
+/* services & protfolio style end*/
+
+#about ol {
+    margin-top: 80px;
+}
+
+#about ol::after {
+    content: "";
+    display: block;
+    height: 100%;
+    border-left: 2px solid #f1f1f1;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -1px;
+    z-index: -1;
+}
+
+#about ol img {
+    width: 156px;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+}
+
+#about ol li {
+    margin-bottom: 80px;
+}
+
+#about ol .detail {
+    width: 30em;
+    text-align: right;
+    position: absolute;
+    top: 0;
+}
+
+#about li:nth-child(even) .detail {
+    text-align: left;
+    right: 0;
+}
+
+#about ol li:last-child {
+    display: inline-block;
+    width: 156px;
+    height: 156px;
+    background-color: #fed136;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+    padding-top: 40px;
+    margin-bottom: 0;
+}
+
+#about li:last-child p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* team start*/
+#team {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#team ul li {
+    display: inline-block;
+}
+
+#team img {
+    width: 238px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#team .cen-pic {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#team .team {
+    margin-bottom: 80px;
+}
+
+#team ul {
+    margin-bottom: 40px;
+}
+
+#team ul+p {
+    font-size: 16px;
+    line-height: 1.75;
+    width: 40em;
+    margin: 0 auto;
+}
+
+/* contact start*/
+#contact {
+    background-image: url("../img/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+}
+
+#contact .center {
+    color: #fff;
+    text-align: center;
+}
+
+#contact .fl,
+#contact .fr {
+    width: 45%;
+}
+
+#contact .fl input {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 25px
+}
+
+#contact form {
+    margin-top: 80px;
+}
+
+#contact .clear-fix textarea {
+    width: 100%;
+    height: 230px;
+}
+
+#contact .center .btn {
+    color: #fff;
+    background-color: #fed136;
+    border-color: #fed136;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+/*footer star*/
+#footer ul {
+    position: absolute;
+    left: 50%;
+    margin-left: -185px;
+}
+
+#footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
